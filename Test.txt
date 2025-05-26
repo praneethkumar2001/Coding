@@ -1,0 +1,26 @@
+#include<stdio.h>
+void func1(int a1[], int);
+void func2(int a3[][2],int, int);
+void main()
+{
+    int a1[5] = {1, 2, 3, 4, 5};
+    int a2[2][2] = {{6,7}, {8,9}};
+    func1(a1,5);
+    func2(a2, 2, 2);
+}
+void func1(int a1[],int len)
+{
+    int i;
+    for(i=0;i<len;i++)
+    printf("\nValue at the position %d is %d",i+1, a1[i]);
+}
+void func2(int a3[][2], int row, int col)
+{
+    int i,j;
+    for(i=0;i<row;i++)
+    {
+        printf("\n");
+        for(j=0;j<col;j++)
+        printf("\t%d",a3[i][j]);
+    }
+}
